@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HelpMePlease</string>
+    <string name="wellcom">ยินดีต้อนรับ</string>
+    <string name="Login_email">อีเมล์</string>
+    <string name="Login_password">รหัสผ่าน</string>
+    <string name="Button_login">ตกลง</string>
+    <string name="Button_cancle">ยกเลิก</string>
+    <string name="Loin_regis">สร้างบัญชีผู้ใช้</string>
+    <string name="menu_setting1">แจ้งเหตุฉุกเฉิน</string>
+    <string name="menu_setting2">แจ้งเหตุไฟไหม้</string>
+    <string name="menu_setting3">แจ้งเหตุน้ำท่วม</string>
+    <string name="menu_setting4">แจ้งเหตุสัตว์อันตราย</string>
+    <string name="menu_setting5">เบอร์โรงพยาบาล</string>
+    <string name="menu_setting6">เบอร์โรงพักตำรวจ</string>
+    <string name="Regis_Username">ชื่อผู้ใช้</string>
+    <string name="Regis_Email">อีเมล์</string>
+    <string name="Regis_Tel">เบอร์โทรศัพท์</string>
+    <string name="Regis_Password">รหัสผ่าน</string>
+    <string name="Button_Regis">ตกลง</string>
+</resources>

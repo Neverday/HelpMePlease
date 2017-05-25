@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HelpMePlease</string>
+    <string name="wellcom">WELCOM</string>
+    <string name="Login_email">"EMAIL "</string>
+    <string name="Login_password">PASSWORD</string>
+    <string name="Button_login">LOGIN</string>
+    <string name="Button_cancle">CANCLE</string>
+    <string name="Loin_regis">SING UP</string>
+    <string name="menu_setting1">NOTIFY</string>
+    <string name="menu_setting2">FIRE</string>
+    <string name="menu_setting3">FLOOD</string>
+    <string name="menu_setting4">Dangerous animals</string>
+    <string name="menu_setting5">HOSPITAL</string>
+    <string name="menu_setting6">POLICE STATION</string>
+    <string name="Regis_Username">USERNAME</string>
+    <string name="Regis_Email">EMAIL</string>
+    <string name="Regis_Tel">TELEPHONE</string>
+    <string name="Regis_Password">PASSWORD</string>
+    <string name="Button_Regis">SING UP</string>
+</resources>

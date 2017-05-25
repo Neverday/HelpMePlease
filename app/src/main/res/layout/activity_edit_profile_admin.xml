@@ -1,0 +1,166 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame"
+    android:fillViewport="true"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.helpmeplease.helpmeplease.Activity.EditProfileActivity">
+
+    <FrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                >
+                <android.support.design.widget.TextInputLayout
+
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txt_username"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:drawablePadding="25dp"
+                        android:hint="Username"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:paddingLeft="15dp"
+
+                        android:textSize="20sp" />
+                </android.support.design.widget.TextInputLayout>
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/buttonNameClear"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:textColor="#000000"
+                    android:background="#FFFFFF"
+                    android:text="X" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                >
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txt_email"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:drawablePadding="25dp"
+                        android:hint="Email"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:paddingLeft="15dp"
+
+                        android:textSize="20sp" />
+                </android.support.design.widget.TextInputLayout>
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/buttonSurnamClear"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:textColor="#000000"
+                    android:background="#FFFFFF"
+                    android:text="X" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                >
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txt_phone"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:drawablePadding="25dp"
+                        android:hint="Phone"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:paddingLeft="15dp"
+
+                        android:textSize="20sp" />
+                </android.support.design.widget.TextInputLayout>
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/buttonPhoneClear"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:textColor="#000000"
+                    android:background="#FFFFFF"
+                    android:text="X" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                >
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txt_pass"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:drawablePadding="25dp"
+                        android:hint="Password"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:paddingLeft="15dp"
+
+                        android:textSize="20sp" />
+                </android.support.design.widget.TextInputLayout>
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/buttonSexClear"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:textColor="#000000"
+                    android:background="#FFFFFF"
+                    android:text="X" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:padding="20dp"
+                android:text="Edit"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

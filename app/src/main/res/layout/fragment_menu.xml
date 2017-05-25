@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.helpmeplease.helpmeplease.Activity.Menu">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/alarm1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/HEADMENU"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#502c2c"
+            android:orientation="vertical"
+            android:paddingTop="45dp">
+
+            <ImageView
+                android:id="@+id/Imalarm"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:src="@drawable/alarm" />
+
+            <TextView
+                android:id="@+id/Notify"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:paddingTop="10dp"
+                android:text="@string/menu_setting1"
+                android:textColor="#faf8f8"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#c75d5d"
+            android:orientation="vertical"
+            android:paddingTop="45dp">
+
+            <ImageView
+                android:id="@+id/Imbrun"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:src="@drawable/burn" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:paddingTop="10dp"
+                android:text="@string/menu_setting2"
+                android:textColor="#faf8f8"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alarm2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alarm1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#d93c3c"
+            android:orientation="vertical"
+            android:paddingTop="45dp">
+
+            <ImageView
+                android:id="@+id/Imwater"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:src="@drawable/water_drop" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_setting3"
+                android:textColor="#faf8f8"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#816969"
+            android:orientation="vertical"
+            android:paddingTop="45dp">
+
+            <ImageView
+                android:id="@+id/Imsnake"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:src="@drawable/snake" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_setting4"
+                android:textColor="#faf8f8"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alarm3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alarm2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+
+            android:layout_width="100dp"
+            android:layout_height="187dp"
+            android:layout_weight="1"
+            android:background="#cfb0b0"
+            android:orientation="vertical"
+            android:paddingTop="45dp">
+
+            <ImageView
+                android:id="@+id/Imhospital"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:src="@drawable/hospital" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingTop="10dp"
+                android:text="@string/menu_setting5"
+                android:textColor="#faf8f8"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f54d4d"
+            android:orientation="vertical"
+            android:paddingTop="45dp">
+
+            <ImageView
+                android:id="@+id/Impolice"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:src="@drawable/policeman" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:paddingTop="10dp"
+                android:text="@string/menu_setting6"
+                android:textColor="#faf8f8"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

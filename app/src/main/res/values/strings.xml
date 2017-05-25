@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">HelpMePlease</string>
+    <string name="Button_cancle">CANCLE</string>
+    <string name="Button_login">LOGIN</string>
+    <string name="Login_email">"EMAIL "</string>
+    <string name="Login_password">PASSWORD</string>
+    <string name="Loin_regis">SING UP</string>
+    <string name="menu_setting1">NOTIFY</string>
+    <string name="menu_setting2">FIRE</string>
+    <string name="menu_setting3">FLOOD</string>
+    <string name="menu_setting4">Dangerous animals</string>
+    <string name="menu_setting5">HOSPITAL</string>
+    <string name="menu_setting6">POLICE STATION</string>
+    <string name="wellcom">WELCOM</string>
+    <string name="Regis_Username">USERNAME</string>
+    <string name="Regis_Email">EMAIL</string>
+    <string name="Regis_Tel">PHONE</string>
+    <string name="Regis_Password">PASSWORD</string>
+    <string name="Button_Regis">SINGUP</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_menu">Menu</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_pdf">PDF</string>
+    <string name="nav_logout">Log out</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Menu</item>
+        <item>Log out</item>
+    </string-array>
+
+    <string-array name="nav_item_activity_titles_admin">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Log out</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
