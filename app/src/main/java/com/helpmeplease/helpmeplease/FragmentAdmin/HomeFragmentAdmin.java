@@ -4,6 +4,7 @@ package com.helpmeplease.helpmeplease.FragmentAdmin;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -13,6 +14,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,10 +32,13 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.helpmeplease.helpmeplease.Activity.MapAdminActivity;
 import com.helpmeplease.helpmeplease.Adapter.AppController;
-import com.helpmeplease.helpmeplease.Adapter.CustomListAdapter;
 import com.helpmeplease.helpmeplease.Adapter.Check;
+import com.helpmeplease.helpmeplease.Adapter.CustomListAdapter;
+import com.helpmeplease.helpmeplease.NetConnect;
 import com.helpmeplease.helpmeplease.R;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -133,6 +138,7 @@ public class HomeFragmentAdmin extends Fragment {
                                 check.setName(obj.getString("name"));
                                 check.setEmail(obj.getString("email"));
                                 check.setPhone(obj.getString("phone"));
+                                check.setDatenotify(obj.getString("date"));
                                 Log.i("Mylog", check.getCategory());
                                 Log.i("Mylog", check.getLocation());
                                 editor.putString("location", check.getLocation());
@@ -177,8 +183,38 @@ public class HomeFragmentAdmin extends Fragment {
                                         txtMap.setTextColor(getResources().getColor(R.color.colorPrimary));
                                         txtMap.setOnClickListener(new View.OnClickListener() {
                                             public void onClick(View v) {
-                                               Intent i = new Intent(HomeFragmentAdmin.this.getActivity(), MapAdminActivity.class);
-                                                startActivity(i);
+
+                                                AlertDialog.Builder dialog = new AlertDialog.Builder(HomeFragmentAdmin.this.getActivity());
+
+                                                dialog.setTitle("ยืนยันคำสั่ง");
+                                                // dialog.setIcon(R.drawable.ic_launcher);
+                                                dialog.setCancelable(true);
+                                                dialog.setMessage("คุณต้องการไปยังที่เกิดเหตุ?");
+                                                dialog.setPositiveButton("ยืนยัน", new DialogInterface.OnClickListener() {
+                                                    public void onClick(DialogInterface dialog, int which) {
+                                                        final String url = "http://newwer.96.lt/API/confirm.php";
+                                                        final String MemberID = shared.getString("strMemberId", "0");
+
+                                                        List<NameValuePair> params = new ArrayList<NameValuePair>();
+                                                        params.add(new BasicNameValuePair("sMemberID", MemberID));
+                                                        Log.i("Mylog",MemberID);
+                                                        String resultServer = NetConnect.getHttpPost(url, params);
+
+
+
+                                                        Intent i = new Intent(HomeFragmentAdmin.this.getActivity(), MapAdminActivity.class);
+                                                        startActivity(i);
+                                                    }
+                                                });
+
+                                                dialog.setNegativeButton("ยกเลิก", new DialogInterface.OnClickListener() {
+                                                    public void onClick(DialogInterface dialog, int which) {
+                                                        dialog.cancel();
+                                                    }
+                                                });
+
+                                                dialog.show();
+
                                             }
                                         });
 

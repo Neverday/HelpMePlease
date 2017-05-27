@@ -35,6 +35,14 @@
         android:textColor="@color/price"
         android:textSize="@dimen/price" />
 
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_phone"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/price" />
+
 
 
 </RelativeLayout>

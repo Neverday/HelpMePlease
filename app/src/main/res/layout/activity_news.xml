@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.helpmeplease.helpmeplease.Activity.NewsActivity">
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <ImageView
+        android:layout_centerHorizontal="true"
         android:id="@+id/imageView2"
         android:layout_width="290dp"
         android:layout_height="238dp"
@@ -14,18 +18,26 @@
         tools:layout_editor_absoluteX="47dp"
         tools:layout_editor_absoluteY="16dp" />
     <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView2"
         android:id="@+id/title"
         android:layout_width="300dp"
-        android:layout_height="34dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/price"
         tools:layout_editor_absoluteX="42dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
     <TextView
         android:id="@+id/content"
         android:layout_width="304dp"
-        android:layout_height="202dp"
+        android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="40dp"
-        android:layout_marginTop="13dp"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        android:layout_marginTop="11dp"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
+</ScrollView>

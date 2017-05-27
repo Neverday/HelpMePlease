@@ -58,8 +58,8 @@ public class HomeFragment extends android.support.v4.app.Fragment implements OnM
     private TextView txtSend;
     String serverKey = "AIzaSyBocGokTyahDh6n714yzZdPIEiwX25br3M";
     SupportMapFragment mapFragment;
-    String destinationHospital,nameHospital;
-    LatLng destinationPolice = new LatLng(13.9176255,100.636700);
+    String destinationHospital,nameHospital,destinationPolice,namePolice;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -280,6 +280,13 @@ public class HomeFragment extends android.support.v4.app.Fragment implements OnM
         }
         gps = new TrackGPS(HomeFragment.this.getActivity());
 
+        destinationPolice = sp.getString("PoliceLocation","");
+        namePolice = sp.getString("PoliceName","");
+        String[] arr = destinationPolice.split(",");
+        Double LatitudePolice = Double.valueOf(arr[1]);
+        Double LongitudePolice = Double.valueOf(arr[0]);
+        LatLng latLngHospital = new LatLng(LongitudePolice,LatitudePolice);
+
         LatLng latLng = new LatLng(gps.getLatitude(), gps.getLongitude());
         Toast.makeText(HomeFragment.this.getActivity(), "Direction Requesting...",
                 Toast.LENGTH_SHORT).show();
@@ -288,11 +295,11 @@ public class HomeFragment extends android.support.v4.app.Fragment implements OnM
                 latLng, 16));
         GoogleDirection.withServerKey(serverKey)
                 .from(latLng)
-                .to(destinationPolice)
+                .to(latLngHospital)
                 .transportMode(TransportMode.DRIVING)
                 .execute(this);
 
-        mMap.addMarker(new MarkerOptions().position(destinationPolice).title("สถานีตำรวจนครบาลสายไหม"));
+        mMap.addMarker(new MarkerOptions().position(latLngHospital).title("สถานีตำรวจนครบาลสายไหม"));
 
     }
 

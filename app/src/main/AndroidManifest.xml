@@ -58,10 +58,19 @@
             android:theme="@style/Theme.AppTheme.Light.DarkActionBar" />
         <activity
             android:name=".Activity.HospitalMenuActivity"
+            android:label="Hospital List"
             android:theme="@style/Theme.AppTheme.Light.DarkActionBar" />
-        <activity android:name=".Activity.NewsActivity"
+        <activity
+            android:name=".Activity.NewsActivity"
             android:label="News"
-            android:theme="@style/Theme.AppTheme.Light.DarkActionBar" ></activity>
+            android:theme="@style/Theme.AppTheme.Light.DarkActionBar" />
+        <activity
+            android:name=".Activity.PoliceMenuActivity"
+            android:label="Police List"
+            android:theme="@style/Theme.AppTheme.Light.DarkActionBar" />
+        <activity android:name=".Activity.ForgetActivity"
+            android:label="Reset Password"
+            android:theme="@style/Theme.AppTheme.Light.DarkActionBar"  ></activity>
     </application>
 
 </manifest>

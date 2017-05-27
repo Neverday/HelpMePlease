@@ -33,6 +33,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         TextView btnRegister = (TextView) findViewById(R.id.Registerlink);
+        TextView btnForget = (TextView) findViewById(R.id.txt_forget);
         sp = getSharedPreferences(P_NAME, Context.MODE_PRIVATE);
         editor = sp.edit();
 
@@ -62,7 +63,13 @@ public class Login extends AppCompatActivity {
         // txtUsername & txtPassword
         final EditText txtEmail = (EditText) findViewById(R.id.txt_email);
         final EditText txtPass = (EditText) findViewById(R.id.txt_pass);
-
+        btnForget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            Intent i = new Intent(getApplicationContext(),ForgetActivity.class);
+                startActivity(i);
+            }
+        });
         // btnLogin
         final Button btnLogin = (Button) findViewById(R.id.bLogin);
         // Perform action on click

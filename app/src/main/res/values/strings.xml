@@ -27,13 +27,14 @@
     <string name="nav_home">Home</string>
     <string name="nav_menu">Menu</string>
     <string name="nav_profile">Profile</string>
-    <string name="nav_pdf">PDF</string>
+    <string name="nav_notify">My Notify</string>
     <string name="nav_logout">Log out</string>
 
     <!-- Toolbar titles when navigation menu item is selected -->
     <string-array name="nav_item_activity_titles">
         <item>Home</item>
         <item>Profile</item>
+        <item>notify</item>
         <item>Menu</item>
         <item>Log out</item>
     </string-array>

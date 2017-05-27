@@ -13,25 +13,29 @@ import com.helpmeplease.helpmeplease.R;
 
 import java.util.List;
 
-public class CustomListAdapter extends BaseAdapter {
+/**
+ * Created by Phattarapong on 28-May-17.
+ */
+
+public class CustomListAdapterPolice extends BaseAdapter {
     private Activity activity;
     private LayoutInflater inflater;
-    private List<Check> checkItems;
+    private List<Police>policeItems;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
-    public CustomListAdapter(Activity activity, List<Check> checkItems) {
+    public CustomListAdapterPolice(Activity activity, List<Police> policeItems) {
         this.activity = activity;
-        this.checkItems = checkItems;
+        this.policeItems = policeItems;
     }
 
     @Override
     public int getCount() {
-        return checkItems.size();
+        return policeItems.size();
     }
 
     @Override
     public Object getItem(int location) {
-        return checkItems.get(location);
+        return policeItems.get(location);
     }
 
     @Override
@@ -46,26 +50,21 @@ public class CustomListAdapter extends BaseAdapter {
             inflater = (LayoutInflater) activity
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView == null)
-            convertView = inflater.inflate(R.layout.list_row, null);
+            convertView = inflater.inflate(R.layout.list_hospital, null);
 
 
 
         TextView name = (TextView) convertView.findViewById(R.id.txt_name);
-        TextView type = (TextView) convertView.findViewById(R.id.txt_type);
-        TextView phone = (TextView) convertView.findViewById(R.id.txt_phone);
-        TextView date = (TextView) convertView.findViewById(R.id.txt_date);
+
         // getting movie data for the row
-        Check m = checkItems.get(position);
+        Police p = policeItems.get(position);
 
 
         // name
-        name.setText("ชื่อผู้แจ้ง : " + m.getName());
+        name.setText(p.getName());
         // type
-        type.setText("ประเภท : " + m.getCategory());
-        // phone
-        phone.setText("เบอร์โทรศัพท์ : " + m.getPhone());
 
-        date.setText("วันที่ - เวลาแจ้ง : " + m.getDatenotify());
+
 
         return convertView;
     }

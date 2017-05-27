@@ -13,6 +13,7 @@ import android.widget.ImageView;
 
 import com.helpmeplease.helpmeplease.Activity.HospitalMenuActivity;
 import com.helpmeplease.helpmeplease.Activity.Map;
+import com.helpmeplease.helpmeplease.Activity.PoliceMenuActivity;
 import com.helpmeplease.helpmeplease.R;
 
 /**
@@ -108,7 +109,7 @@ public class MenuFragment extends Fragment {
                 checktype = 5;
                 editor.putInt("Checktype",checktype);
                 editor.commit();
-                Intent i = new Intent(MenuFragment.this.getActivity(), Map.class);
+                Intent i = new Intent(MenuFragment.this.getActivity(), PoliceMenuActivity.class);
                 startActivity(i);
             }
         });

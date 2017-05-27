@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.helpmeplease.helpmeplease.Fragment.HomeFragment;
+import com.helpmeplease.helpmeplease.Fragment.MyNotifyFragment;
 import com.helpmeplease.helpmeplease.Fragment.ProfileFragment;
 import com.helpmeplease.helpmeplease.R;
 
@@ -29,7 +30,7 @@ public class Map extends AppCompatActivity {
     private static final String TAG_HOME = "home";
     private static final String TAG_MENU = "menu";
     private static final String TAG_PROFILE = "profile";
-    private static final String TAG_SETTING = "setting";
+    private static final String TAG_NOTIFY = "notify";
     private static final String TAG_LOGOUT= "logout";
     public static String CURRENT_TAG = TAG_HOME;
 
@@ -127,6 +128,10 @@ public class Map extends AppCompatActivity {
                 // Profile
                 ProfileFragment ProfileFragment = new ProfileFragment();
                 return ProfileFragment;
+            case 2:
+                // Notify
+                MyNotifyFragment MyNotifyFragment = new MyNotifyFragment();
+                return MyNotifyFragment;
 
             default:
                 return new HomeFragment();
@@ -158,6 +163,10 @@ public class Map extends AppCompatActivity {
                             case R.id.nav_profile:
                                 navItemIndex = 1;
                                 CURRENT_TAG = TAG_PROFILE;
+                                break;
+                            case R.id.nav_notify:
+                                navItemIndex = 2;
+                                CURRENT_TAG = TAG_NOTIFY;
                                 break;
 
                             case R.id.nav_logout:
