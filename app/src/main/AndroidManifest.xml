@@ -71,6 +71,7 @@
         <activity android:name=".Activity.ForgetActivity"
             android:label="Reset Password"
             android:theme="@style/Theme.AppTheme.Light.DarkActionBar"  ></activity>
+
     </application>
 
 </manifest>

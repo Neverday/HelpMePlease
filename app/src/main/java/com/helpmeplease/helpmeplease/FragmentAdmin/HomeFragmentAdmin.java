@@ -173,7 +173,74 @@ public class HomeFragmentAdmin extends Fragment {
                                         final String Date = checkList.get(position).getDatenotify()
                                                 .toString();
 
+                                        String url = "http://newwer.96.lt/API/showuser.php";
+                                        List<NameValuePair> params = new ArrayList<NameValuePair>();
+                                        params.add(new BasicNameValuePair("sMembername", strName));
+                                        params.add(new BasicNameValuePair("sPhone", strPhone));
+                                        String resultServer = NetConnect.getHttpPost(url, params);
 
+                                        /*** Default Value ***/
+
+                                        String strMemberId2 = "0";
+
+                                        JSONObject c;
+                                        try {
+                                            c = new JSONObject(resultServer);
+
+                                            strMemberId2= c.getString("MemberID");
+                                            editor.putString("memberid2",strMemberId2);
+                                            editor.commit();
+
+
+                                        } catch (JSONException e) {
+                                            // TODO Auto-generated catch block
+                                            e.printStackTrace();
+                                        }
+
+
+
+                                        TextView textStatus = (TextView)dialog.findViewById(R.id.text_stats);
+                                        textStatus.setTextColor(getResources().getColor(R.color.colorPrimary));
+                                        textStatus.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                final CharSequence[] items = { "ช่วยสำเร็จ", "ไม่สำเร็จ",
+                                                        "ยกเลิก" };
+                                                AlertDialog.Builder builder = new AlertDialog.Builder
+                                                        (HomeFragmentAdmin.this.getActivity());
+                                                builder.setTitle("เปลี่ยนสถานะการช่วยเหลือ!");
+                                                builder.setItems(items, new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialog, int item) {
+                                                        if (items[item].equals("ช่วยสำเร็จ")) {
+                                                            final String url = "http://newwer.96.lt/API/chagetrue.php";
+                                                            final String MemberID = shared.getString("memberid2", "0");
+
+                                                            List<NameValuePair> params = new ArrayList<NameValuePair>();
+                                                            params.add(new BasicNameValuePair("sMemberID", MemberID));
+                                                            params.add(new BasicNameValuePair("sDate", Date));
+
+                                                            Log.i("Mylog",MemberID);
+                                                            Log.i("Mylog",Date);
+                                                            String resultServer = NetConnect.getHttpPost(url, params);
+                                                        } else if (items[item].equals("ไม่สำเร็จ")) {
+                                                            final String url = "http://newwer.96.lt/API/chagefail.php";
+                                                            final String MemberID = shared.getString("memberid2", "0");
+                                                            List<NameValuePair> params = new ArrayList<NameValuePair>();
+                                                            params.add(new BasicNameValuePair("sMemberID", MemberID));
+                                                            params.add(new BasicNameValuePair("sDate", Date));
+
+                                                            Log.i("Mylog",MemberID);
+                                                            Log.i("Mylog",Date);
+                                                            String resultServer = NetConnect.getHttpPost(url, params);
+                                                        } else if (items[item].equals("ยกเลิก")) {
+                                                            dialog.dismiss();
+                                                        }
+                                                    }
+                                                });
+                                                builder.show();
+                                            }
+                                        });
                                         TextView textClose = (TextView) dialog.findViewById(R.id.text_close);
                                         textClose.setTextColor(getResources().getColor(R.color.colorPrimary));
                                         textClose.setOnClickListener(new View.OnClickListener() {
