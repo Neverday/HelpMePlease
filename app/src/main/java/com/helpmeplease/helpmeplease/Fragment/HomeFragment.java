@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
@@ -51,11 +52,12 @@ public class HomeFragment extends android.support.v4.app.Fragment implements OnM
     private TrackGPS gps;
     GoogleMap mMap;
     Marker mMarker;
-
+    final private String KEY_IMAGE = "image";
     double lat, lng;
     private Button btnCamera,btnSend;
     private int checkType = 0;
     private TextView txtSend;
+    String url = "http://newwer.96.lt/API/insertlocation.php";
     String serverKey = "AIzaSyBocGokTyahDh6n714yzZdPIEiwX25br3M";
     SupportMapFragment mapFragment;
     String destinationHospital,nameHospital,destinationPolice,namePolice;
@@ -74,6 +76,8 @@ public class HomeFragment extends android.support.v4.app.Fragment implements OnM
         sp = getActivity().getSharedPreferences(P_NAME, Context.MODE_PRIVATE);
         checkType = sp.getInt("Checktype", 0);
 
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
 
         Log.i("Mylog", String.valueOf(checkType));
@@ -90,11 +94,11 @@ public class HomeFragment extends android.support.v4.app.Fragment implements OnM
             @Override
             public void onClick(View view) {
 
-                String url = "http://newwer.96.lt/API/insert.php";
-                String MemberID = sp.getString("strMemberId","");
-                List<NameValuePair> params = new ArrayList<NameValuePair>();
-                params.add(new BasicNameValuePair("sMemberid", MemberID));
-                NetConnect.getHttpPost(url, params);
+//                String url = "http://newwer.96.lt/API/insert.php";
+//                String MemberID = sp.getString("strMemberId","");
+//                List<NameValuePair> params = new ArrayList<NameValuePair>();
+//                params.add(new BasicNameValuePair("sMemberid", MemberID));
+//                NetConnect.getHttpPost(url, params);
                 startActivity(new Intent(HomeFragment.this.getActivity(), CameraActivity.class));
 
             }
@@ -104,7 +108,8 @@ public class HomeFragment extends android.support.v4.app.Fragment implements OnM
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder dialog = new AlertDialog.Builder(HomeFragment.this.getActivity());
-
+                String  dateToday = sp.getString("Datetoday", "");
+                Log.i("Today",dateToday);
                 dialog.setTitle("ยืนยันคำสั่ง");
                 // dialog.setIcon(R.drawable.ic_launcher);
                 dialog.setCancelable(true);
@@ -112,10 +117,12 @@ public class HomeFragment extends android.support.v4.app.Fragment implements OnM
                 dialog.setPositiveButton("ยืนยัน", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
 
-               String url = "http://newwer.96.lt/API/insertlocation.php";
+                        String  dateToday = sp.getString("Datetoday", "");
+                        Log.i("Today",dateToday);
 
                         String MemberID = sp.getString("strMemberId","");
-                        String TypeMenu = sp.getString("Typemap","");
+
+
                         List<NameValuePair> params = new ArrayList<NameValuePair>();
 
 
@@ -123,10 +130,9 @@ public class HomeFragment extends android.support.v4.app.Fragment implements OnM
                         lng = gps.getLongitude();
 
 
-                        params.add(new BasicNameValuePair("sMemberid", MemberID));
-                        params.add(new BasicNameValuePair("sTypeMenu", TypeMenu));
-                        params.add(new BasicNameValuePair("sText",txtSend.getText().toString()));
-                        params.add(new BasicNameValuePair("sLocation",Double.toString(lng)+ "," + Double.toString(lat)));
+                        params.add(new BasicNameValuePair("Memberid", MemberID));
+                        params.add(new BasicNameValuePair("Datetoday", dateToday));
+                        params.add(new BasicNameValuePair("Text", txtSend.getText().toString()));
                         String resultServer = NetConnect.getHttpPost(url, params);
 
                         /*** Default Value ***/
@@ -327,4 +333,5 @@ public class HomeFragment extends android.support.v4.app.Fragment implements OnM
                 Toast.LENGTH_SHORT).show();
 
     }
+
 }

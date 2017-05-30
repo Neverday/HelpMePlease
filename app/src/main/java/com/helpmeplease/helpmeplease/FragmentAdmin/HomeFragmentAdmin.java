@@ -170,6 +170,8 @@ public class HomeFragmentAdmin extends Fragment {
 
                                         String Picture = checkList.get(position).getThumbnailUrl()
                                                 .toString();
+                                        final String Date = checkList.get(position).getDatenotify()
+                                                .toString();
 
 
                                         TextView textClose = (TextView) dialog.findViewById(R.id.text_close);
@@ -197,7 +199,10 @@ public class HomeFragmentAdmin extends Fragment {
 
                                                         List<NameValuePair> params = new ArrayList<NameValuePair>();
                                                         params.add(new BasicNameValuePair("sMemberID", MemberID));
+                                                        params.add(new BasicNameValuePair("sDate", Date));
+
                                                         Log.i("Mylog",MemberID);
+                                                        Log.i("Mylog",Date);
                                                         String resultServer = NetConnect.getHttpPost(url, params);
 
 
