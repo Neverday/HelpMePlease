@@ -95,20 +95,20 @@ public class Register extends AppCompatActivity {
 
         }
         //Check Tel
-        if(txtPhone.getText().length() == 0)
+        if(txtPhone.getText().length() == 0 || txtPhone.getText().length()<10 )
         {
 
-            ad.setMessage("กรุณากรอก [เบอร์โทรศัพท์] ");
+            ad.setMessage("กรุณากรอก [เบอร์โทรศัพท์] ขั้นต่ำ 10 ตัวเลข ");
             ad.show();
             txtUsername.requestFocus();
             return false;
 
         }
         //Check Pass
-        if(txtPass.getText().length() == 0)
+        if(txtPass.getText().length() == 0 || txtPass.getText().length()<6)
         {
 
-            ad.setMessage("กรุณากรอก [พาสเวิร์ด] ");
+            ad.setMessage("กรุณากรอก [พาสเวิร์ด] ขั้นต่ำ 6 ตัวอํกษร ");
             ad.show();
             txtUsername.requestFocus();
             return false;

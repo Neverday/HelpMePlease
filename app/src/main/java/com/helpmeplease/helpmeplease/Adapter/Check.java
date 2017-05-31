@@ -1,16 +1,16 @@
 package com.helpmeplease.helpmeplease.Adapter;
 
 public class Check {
-    private String Name,Phone,Category,Location,Text,Email,thumbnailUrl,Datenotify;
+    private String Name,Phone,Category,Location,Text,Email,thumbnailUrl,Datenotify,Id;
 
 
     public Check() {
     }
 
     public Check(String Name, String Type, String Phone, String Category, String Location, String Text,
-                 String Id_user, String Email, String thumbnailUrl,String Datenotify) {
+                 String Id, String Email, String thumbnailUrl,String Datenotify) {
         this.Name = Name;
-
+        this.Id = Id;
         this.thumbnailUrl = thumbnailUrl;
         this.Phone = Phone;
         this.Category = Category;
@@ -75,6 +75,13 @@ public class Check {
         this.thumbnailUrl = thumbnailUrl;
     }
 
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String Id) {
+        this.Id = Id;
+    }
 
     public String getDatenotify() {
         return Datenotify;
