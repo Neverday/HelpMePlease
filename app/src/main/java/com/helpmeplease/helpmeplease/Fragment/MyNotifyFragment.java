@@ -115,7 +115,7 @@ public class MyNotifyFragment extends Fragment {
 
     private void initSampleData() {
 
-        final String MemberID = shared.getString("strMemberId", "0");
+       // final String MemberID = shared.getString("strMemberId", "0");
 //
         // Creating volley request obj
         JsonArrayRequest movieReq = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
