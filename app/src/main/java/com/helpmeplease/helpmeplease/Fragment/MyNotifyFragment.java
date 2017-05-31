@@ -55,7 +55,7 @@ public class MyNotifyFragment extends Fragment {
     private static final String TAG = HomeFragmentAdmin.class.getSimpleName();
 
     // Movies json url
-    private static final String url = "http://newwer.96.lt/API/getJSON.php";
+
     private ProgressDialog pDialog;
     private List<Check> checkList = new ArrayList<Check>();
     private ListView listView;
@@ -115,8 +115,8 @@ public class MyNotifyFragment extends Fragment {
 
     private void initSampleData() {
 
-       // final String MemberID = shared.getString("strMemberId", "0");
-//
+         String MemberID = shared.getString("strMemberId", "0");
+    String url = "http://newwer.96.lt/API/getJSONMEMBER.php?strMemberId="+MemberID;
         // Creating volley request obj
         JsonArrayRequest movieReq = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
 
