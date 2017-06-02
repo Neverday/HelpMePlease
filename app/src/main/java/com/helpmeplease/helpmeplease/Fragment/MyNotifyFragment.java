@@ -203,6 +203,9 @@ public class MyNotifyFragment extends Fragment {
                                         Toast.makeText(MyNotifyFragment.this.getActivity(),"ขณะนี้เจ้าหน้าที่กำลังไปยังที่เกิดเหตุ",Toast.LENGTH_LONG).show();
 
                                         }
+                                        else{
+                                            Toast.makeText(MyNotifyFragment.this.getActivity(),"กรุณารอเจ้าหน้าที่ตอบรับ",Toast.LENGTH_LONG).show();
+                                        }
                                         TextView textClose = (TextView) dialog.findViewById(R.id.text_close);
                                         textClose.setTextColor(getResources().getColor(R.color.colorPrimary));
                                         textClose.setOnClickListener(new View.OnClickListener() {
