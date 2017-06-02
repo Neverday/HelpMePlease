@@ -55,7 +55,7 @@ public class MyNotifyFragment extends Fragment {
     private static final String TAG = HomeFragmentAdmin.class.getSimpleName();
 
     // Movies json url
-    private static final String url = "http://newwer.96.lt/API/getJSON.php";
+
     private ProgressDialog pDialog;
     private List<Check> checkList = new ArrayList<Check>();
     private ListView listView;
@@ -64,6 +64,7 @@ public class MyNotifyFragment extends Fragment {
     SharedPreferences shared;
     SharedPreferences.Editor editor;
     private final String P_NAME = "Helpme";
+
     public MyNotifyFragment() {
         // Required empty public constructor
     }
@@ -111,10 +112,15 @@ public class MyNotifyFragment extends Fragment {
 
         return view;
     }
+
     private void initSampleData() {
+
+         String MemberID = shared.getString("strMemberId", "0");
+    String url = "http://newwer.96.lt/API/getJSONMEMBER.php?strMemberId="+MemberID;
         // Creating volley request obj
-        JsonArrayRequest movieReq = new JsonArrayRequest(url,
-                new Response.Listener<JSONArray>() {
+        JsonArrayRequest movieReq = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+
+
                     @Override
                     public void onResponse(JSONArray response) {
                         Log.d(TAG, response.toString());
@@ -126,6 +132,7 @@ public class MyNotifyFragment extends Fragment {
 
                                 JSONObject obj = response.getJSONObject(i);
                                 Check check = new Check();
+                                check.setId(obj.getString("id"));
                                 check.setCategory(obj.getString("category"));
                                 check.setLocation(obj.getString("location"));
                                 check.setText(obj.getString("text"));
@@ -168,7 +175,34 @@ public class MyNotifyFragment extends Fragment {
 
                                         final String Date = checkList.get(position).getDatenotify()
                                                 .toString();
+                                        String id = checkList.get(position).getId()
+                                                .toString();
 
+                                        String url = "http://newwer.96.lt/API/statusconfirm.php";
+                                        List<NameValuePair> params = new ArrayList<NameValuePair>();
+
+                                        params.add(new BasicNameValuePair("strDate", Date));
+                                        params.add(new BasicNameValuePair("strId", id));
+                                        String resultServer = NetConnect.getHttpPost(url, params);
+
+                                        /*** Default Value ***/
+                                        String strStatusId = "0";
+                                        String strError = "Unknow Status!";
+
+                                        JSONObject c;
+                                        try {
+                                            c = new JSONObject(resultServer);
+                                            strStatusId = c.getString("StatusID");
+                                            strError = c.getString("Error");
+
+                                        } catch (JSONException e) {
+                                            // TODO Auto-generated catch block
+                                            e.printStackTrace();
+                                        }
+                                        if(strStatusId.equals("1")){
+                                        Toast.makeText(MyNotifyFragment.this.getActivity(),"ขณะนี้เจ้าหน้าที่กำลังไปยังที่เกิดเหตุ",Toast.LENGTH_LONG).show();
+
+                                        }
                                         TextView textClose = (TextView) dialog.findViewById(R.id.text_close);
                                         textClose.setTextColor(getResources().getColor(R.color.colorPrimary));
                                         textClose.setOnClickListener(new View.OnClickListener() {
@@ -269,7 +303,6 @@ public class MyNotifyFragment extends Fragment {
     }
 
 
-
     private void hidePDialog() {
         if (pDialog != null) {
             pDialog.dismiss();
@@ -277,12 +310,13 @@ public class MyNotifyFragment extends Fragment {
         }
 
     }
+
     private class DownloadImageFromInternet extends AsyncTask<String, Void, Bitmap> {
         ImageView imageView;
 
         public DownloadImageFromInternet(ImageView imageView) {
             this.imageView = imageView;
-            Toast.makeText(getActivity(), "โปรดรอสักครู่ กำลังโหลดข้อมูลภาพ", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getActivity(), "โปรดรอสักครู่ กำลังโหลดข้อมูลภาพ", Toast.LENGTH_SHORT).show();
         }
 
         protected Bitmap doInBackground(String... urls) {

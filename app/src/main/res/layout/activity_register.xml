@@ -42,6 +42,7 @@
         android:layout_alignParentStart="true">
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
@@ -82,13 +83,10 @@
 
         <EditText
             android:id="@+id/email"
-            android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="อีเมล์"
-            android:singleLine="true"
-            />
+
 
     </LinearLayout>
 
@@ -106,7 +104,7 @@
             android:layout_weight="3"
             android:paddingBottom="10dp"
             android:paddingLeft="5dp"
-            android:text="เบอร์โทรศัพท์"
+
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -116,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:inputType="phone"
-            android:hint="เบอร์โทรศัพท์"
+
             android:singleLine="true"
              />
 
@@ -146,7 +144,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="รหัสผ่าน"
+
             android:singleLine="true" />
 
     </LinearLayout>
