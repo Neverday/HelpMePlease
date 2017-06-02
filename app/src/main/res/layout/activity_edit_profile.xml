@@ -37,7 +37,7 @@
                         android:layout_marginTop="5dp"
 
                         android:drawablePadding="25dp"
-                        android:hint="Username"
+                        android:hint="ชื่อ-นามสกุล"
                         android:inputType="text"
                         android:padding="5dp"
                         android:paddingLeft="15dp"
@@ -70,7 +70,7 @@
                         android:layout_marginTop="5dp"
 
                         android:drawablePadding="25dp"
-                        android:hint="Email"
+                        android:hint="อีเมลล์"
                         android:inputType="text"
                         android:padding="5dp"
                         android:paddingLeft="15dp"
@@ -103,7 +103,7 @@
                         android:layout_marginTop="5dp"
 
                         android:drawablePadding="25dp"
-                        android:hint="Phone"
+                        android:hint="เบอร์โทรศัพท์"
                         android:inputType="text"
                         android:padding="5dp"
                         android:paddingLeft="15dp"
@@ -136,7 +136,7 @@
                         android:layout_marginTop="5dp"
 
                         android:drawablePadding="25dp"
-                        android:hint="Password"
+                        android:hint="รหัสผ่าน"
                         android:inputType="text"
                         android:padding="5dp"
                         android:paddingLeft="15dp"
@@ -158,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:padding="20dp"
-                android:text="Edit"
+                android:text="แก้ไข"
                 android:textColor="#000000" />
 
         </LinearLayout>

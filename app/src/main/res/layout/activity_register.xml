@@ -47,7 +47,7 @@
             android:layout_weight="3"
             android:paddingBottom="10dp"
             android:paddingLeft="5dp"
-            android:text="@string/Regis_Username"
+            android:text="ชื่อ-นามสกุล"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/Regis_Username"
+            android:hint="ชื่อ-นามสกุล"
             android:singleLine="true"
          />
 
@@ -76,7 +76,7 @@
             android:layout_weight="3"
             android:paddingBottom="10dp"
             android:paddingLeft="5dp"
-            android:text="@string/Regis_Email"
+            android:text="อีเมล์"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -86,7 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/Regis_Email"
+            android:hint="อีเมล์"
             android:singleLine="true"
             />
 
@@ -106,7 +106,7 @@
             android:layout_weight="3"
             android:paddingBottom="10dp"
             android:paddingLeft="5dp"
-            android:text="@string/Regis_Tel"
+            android:text="เบอร์โทรศัพท์"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:inputType="phone"
-            android:hint="@string/Regis_Tel"
+            android:hint="เบอร์โทรศัพท์"
             android:singleLine="true"
              />
 
@@ -136,7 +136,7 @@
             android:layout_weight="3"
             android:paddingBottom="10dp"
             android:paddingLeft="5dp"
-            android:text="@string/Regis_Password"
+            android:text="รหัสผ่าน"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -146,7 +146,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/Regis_Password"
+            android:hint="รหัสผ่าน"
             android:singleLine="true" />
 
     </LinearLayout>
@@ -158,6 +158,6 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/Passregis"
         android:layout_marginLeft="130dp"
-        android:text="@string/Button_Regis" />
+        android:text="ตกลง" />
 
 </RelativeLayout>

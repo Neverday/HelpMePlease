@@ -5,22 +5,22 @@
         <item
             android:id="@+id/nav_home"
 
-            android:title="@string/nav_home" />
+            android:title="หน้าแรก" />
 
         <item
             android:id="@+id/nav_profile"
 
-            android:title="@string/nav_profile" />
+            android:title="ข้อมูลผู้ใช้" />
 
         
     </group>
-    <item android:title="Other">
+    <item android:title="อื่นๆ">
         <menu>
 
             <item
                 android:id="@+id/nav_logout"
 
-                android:title="@string/nav_logout" />
+                android:title="ออกจากระบบ" />
         </menu>
     </item>
 

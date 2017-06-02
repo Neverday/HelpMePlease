@@ -43,11 +43,11 @@
 
         <activity
             android:name=".Activity.CameraActivity"
-            android:label="Upload Images"
+            android:label="อัพโหลดรูปภาพ"
             android:theme="@style/Theme.AppTheme.Light.DarkActionBar" />
         <activity
             android:name=".Activity.EditProfileActivity"
-            android:label="Edit Profile"
+            android:label="แก้ไขข้อมูลผู้ใช้"
             android:theme="@style/Theme.AppTheme.Light.DarkActionBar" />
         <activity android:name=".Activity.AdminActivity" />
         <activity
@@ -58,18 +58,18 @@
             android:theme="@style/Theme.AppTheme.Light.DarkActionBar" />
         <activity
             android:name=".Activity.HospitalMenuActivity"
-            android:label="Hospital List"
+            android:label="โรงพยาบาล"
             android:theme="@style/Theme.AppTheme.Light.DarkActionBar" />
         <activity
             android:name=".Activity.NewsActivity"
-            android:label="News"
+            android:label="ข่าว"
             android:theme="@style/Theme.AppTheme.Light.DarkActionBar" />
         <activity
             android:name=".Activity.PoliceMenuActivity"
-            android:label="Police List"
+            android:label="สถานีตำรวจ"
             android:theme="@style/Theme.AppTheme.Light.DarkActionBar" />
         <activity android:name=".Activity.ForgetActivity"
-            android:label="Reset Password"
+            android:label="ลืมรหัสผ่าน"
             android:theme="@style/Theme.AppTheme.Light.DarkActionBar"  ></activity>
 
     </application>

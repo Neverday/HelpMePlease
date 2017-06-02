@@ -20,18 +20,18 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
 
-            android:paddingLeft="50dp"
+            android:paddingLeft="30dp"
             android:paddingTop="10dp"
             android:textColor="#000000"
             android:text="Help Me Please"
             android:textSize="30dp" />
 
-        <ImageView
+  <!--  <ImageView
             android:id="@+id/imageView"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="7"
-            android:src="@drawable/hold" />
+            android:src="@drawable/hold" />  -->
     </LinearLayout>
 
 

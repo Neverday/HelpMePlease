@@ -17,7 +17,7 @@
 
             android:drawablePadding="25dp"
             android:enabled="false"
-            android:hint="Username"
+            android:hint="ชื่อ-นามสกุล"
             android:padding="5dp"
             android:paddingLeft="15dp"
 
@@ -36,7 +36,7 @@
             android:drawablePadding="25dp"
 
             android:enabled="false"
-            android:hint="Email"
+            android:hint="อีเมล์"
 
             android:padding="5dp"
             android:paddingLeft="15dp"
@@ -55,7 +55,7 @@
             android:layout_marginTop="5dp"
             android:drawablePadding="25dp"
             android:enabled="false"
-            android:hint="Phone"
+            android:hint="เบอร์โทรศัพท์"
 
             android:padding="5dp"
             android:paddingLeft="15dp"
@@ -75,7 +75,7 @@
 
             android:drawablePadding="25dp"
             android:enabled="false"
-            android:hint="Password"
+            android:hint="รหัสผ่าน"
             android:padding="5dp"
             android:paddingLeft="15dp"
 
@@ -86,7 +86,7 @@
         android:id="@+id/btn_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Edit">
+        android:text="แก้ไข">
 
     </Button>
 
