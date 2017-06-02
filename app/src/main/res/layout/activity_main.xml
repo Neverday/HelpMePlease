@@ -22,19 +22,19 @@
        />
 
     <ImageView
-        android:layout_gravity="center"
         android:id="@+id/logo"
         android:layout_width="321dp"
         android:layout_height="115dp"
-        android:src="@drawable/hold"
-        />
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:src="@drawable/hold" />
 
 
     <Button
         android:layout_marginTop="100dp"
         android:layout_gravity="center"
         android:id="@+id/btnWelcom"
-        android:text="@string/wellcom"
+        android:text="ยินดีต้อนรับ"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
 

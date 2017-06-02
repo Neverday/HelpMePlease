@@ -78,7 +78,7 @@ public class Register extends AppCompatActivity {
         if(txtUsername.getText().length() == 0)
         {
 
-            ad.setMessage("กรุณากรอก [ชื่อผู้ใช้] ");
+            ad.setMessage("กรุณากรอก [ชื่อ-นามสกุล] ");
             ad.show();
             txtUsername.requestFocus();
             return false;
@@ -108,7 +108,7 @@ public class Register extends AppCompatActivity {
         if(txtPass.getText().length() == 0 || txtPass.getText().length()<6)
         {
 
-            ad.setMessage("กรุณากรอก [พาสเวิร์ด] ขั้นต่ำ 6 ตัวอํกษร ");
+
             ad.show();
             txtUsername.requestFocus();
             return false;

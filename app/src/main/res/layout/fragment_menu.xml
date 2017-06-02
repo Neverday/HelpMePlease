@@ -37,7 +37,7 @@
                 android:layout_height="match_parent"
 
                 android:paddingTop="10dp"
-                android:text="@string/menu_setting1"
+                android:text="แจ้งเหตุฉุกเฉิน"
                 android:textColor="#faf8f8"
                 android:textSize="15dp" />
 
@@ -64,7 +64,7 @@
                 android:layout_height="match_parent"
 
                 android:paddingTop="10dp"
-                android:text="@string/menu_setting2"
+                android:text="แจ้งเหตุไฟไหม้"
                 android:textColor="#faf8f8"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -99,7 +99,7 @@
                 android:layout_height="30dp"
 
                 android:layout_marginTop="5dp"
-                android:text="@string/menu_setting3"
+                android:text="แจ้งเหตุน้ำท่วม"
                 android:textColor="#faf8f8"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -124,7 +124,7 @@
                 android:layout_height="30dp"
 
                 android:layout_marginTop="5dp"
-                android:text="@string/menu_setting4"
+                android:text="แจ้งเหตุสัตว์อันตราย"
                 android:textColor="#faf8f8"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -157,7 +157,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:paddingTop="10dp"
-                android:text="@string/menu_setting5"
+                android:text="โรงพยาบาล"
                 android:textColor="#faf8f8"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -182,7 +182,7 @@
                 android:layout_height="30dp"
 
                 android:paddingTop="10dp"
-                android:text="@string/menu_setting6"
+                android:text="สถานีตำรวจ"
                 android:textColor="#faf8f8"
                 android:textSize="15dp" />
         </LinearLayout>
